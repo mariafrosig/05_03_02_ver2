@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Lato:300,400" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <header>
+
+            <nav>
+                <div class="menu_desktop">
+
+                    <a href="forside.html" class="logo">
+                        <img src="logo_lelieu.png" alt="logo">
+                    </a>
+
+                    <ul class="menu_text">
+
+
+                        <a href="menu.html" class="menu_text">Menu</a><br><br>
+                        <a href="wine.html" class="menu_text">Wine</a><br><br>
+                        <a href="book.html" class="menu_text">Book a table</a><br><br>
+                        <a href="contact.html" class="menu_text">Contact</a><br><br>
+
+                    </ul>
+
+
+
+                </div>
+
+                <div class="menu_ipad">
+                    <a href="forside.html" class="logo">
+                        <img src="logo_lelieu.png" alt="logo">
+                    </a>
+
+                    <ul class="menu_text">
+                        <a href="contact.html" class="menu_text">Contact</a>
+                        <a href="book.html" class="menu_text">Book a table</a>
+                        <a href="wine.html" class="menu_text">Wine</a>
+                        <a href="menu.html" class="menu_text">Menu</a>
+                    </ul>
+                </div>
+
+
+
+                <div class="menu_mobil">
+                    <a href="forside.html" id="logo">
+                        <img src="logo_lelieu.png" alt="logo">
+                    </a>
+                    <div class="menuknap">☰</div>
+
+
+                    <div class="menu_skjult">
+                        <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                        <a href="menu.html" class="menu_text">Menu</a>
+                        <a href="wine.html" class="menu_text">Wine</a>
+                        <a href="book.html" class="menu_text">Book a table</a>
+                        <a href="contact.html" class="menu_text">Contact</a>
+                    </div>
+
+                </div>
+
+
+            </nav>
+
+        </header>
+
+
+        <div class="container_forside">
+            <div class="item film">
+                <video width="100%" height="548" autoplay>
+                    <source src="lelieu_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            
+            <div class="item ekstra_menu_mobile">
+                <a href="menu.html" class="menu_text">Menu</a>
+                 <a href="book.html" class="menu_text">Book</a>
+            </div>
+            
+            <div class="item citat">
+
+                <div class="citat_container">
+
+                    <div class="citat_tegn">
+                        "
+                    </div>
+                    <div class="citat_text">
+                        <p>This jewel box of a restaurant delights all who venture in. Right off of Union Square, Tocqueville Restaurant has been greeting its loyal clientele since 2000. This kitchen turns out sophisticated French-American cuisine while a smart staff personalizes your service. As you enter, the cozy bar lures you in to admire its collection of rare and fine spirits. . A few steps further, and you will enter the comfortable, chic and lofty main dining room for an impressive dining experience.
+                            <br> <br>
+                            We look forward to welcoming you.</p>
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="item foto1">
+
+                <img src="forside_foto/foto2.jpg" alt="steak">
+            </div>
+
+
+            <div class="item foto2">
+
+                <img src="forside_foto/foto3.jpg" alt="muslinger">
+            </div>
+
+
+
+
+            <div class="item foto3">
+
+                <img src="forside_foto/foto1.jpg" alt="muslinger">
+            </div>
+
+
+            <div class="item foto4">
+                <img src="forside_foto/foto4.jpg" alt="muslinger">
+
+            </div>
+
+            <div class="item foto5">
+
+                <img src="forside_foto/interior.jpg" alt="muslinger">
+
+
+            </div>
+
+            <div class="item footer">
+
+                <p>
+                    345 Park Ave S, New York, NY 10010, USA | +1 212-686-1006 | restaurant@lelieu.dk
+
+                </p>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises");
+
+
+            document.querySelector(".menu_skjult").classList.add("hidden");
+            document.querySelector(".page").classList.add("fade_in");
+
+
+            document.querySelector(".menuknap").addEventListener("click", toggleMenu);
+
+        }
+
+
+
+        function toggleMenu() {
+            console.log("toggle menu");
+
+            document.querySelector(".menu_skjult").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector(".menu_skjult").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector(".menuknap").textContent = "☰";
+
+
+
+            } else {
+                document.querySelector(".menuknap").textContent = "X";
+
+
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

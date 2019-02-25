@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Lato:300,400" rel="stylesheet">
+</head>
+
+<body>
+    <div class="page fade_in">
+
+        <header>
+
+            <nav>
+                <div class="menu_desktop">
+
+                    <a href="forside.html" class="logo">
+                        <img src="logo_lelieu.png" alt="logo">
+                    </a>
+
+                    <ul class="menu_text">
+
+
+                        <a href="menu.html" class="menu_text">Menu</a><br><br>
+                        <a href="wine.html" class="menu_text">Wine</a><br><br>
+                        <a href="book.html" class="menu_text">Book a table</a><br><br>
+                        <a href="contact.html" class="menu_text">Contact</a><br><br>
+
+                    </ul>
+
+
+
+                </div>
+
+                <div class="menu_ipad">
+                    <a href="forside.html" class="logo">
+                        <img src="logo_lelieu.png" alt="logo">
+                    </a>
+
+                    <ul class="menu_text">
+                        <a href="contact.html" class="menu_text">Contact</a>
+                        <a href="book.html" class="menu_text">Book a table</a>
+                        <a href="wine.html" class="menu_text">Wine</a>
+                        <a href="menu.html" class="menu_text">Menu</a>
+                    </ul>
+                </div>
+
+
+
+                <div class="menu_mobil">
+                    <a href="forside.html" id="logo">
+                        <img src="logo_lelieu.png" alt="logo">
+                    </a>
+                    <div class="menuknap">☰</div>
+
+
+                    <div class="menu_skjult">
+                        <br> <br> <br> <br> <br> <br> <br> <br> <br>
+                        <a href="menu.html" class="menu_text">Menu</a>
+                        <a href="wine.html" class="menu_text">Wine</a>
+                        <a href="book.html" class="menu_text">Book a table</a>
+                        <a href="contact.html" class="menu_text">Contact</a>
+                    </div>
+
+                </div>
+
+
+            </nav>
+
+        </header>
+
+
+        <div class="container_contact">
+
+
+            <div class="kasse1 info">
+
+                <p>
+                    Le Lieu<br><br>
+
+                    345 Park Ave S, New York, <br>
+                    NY 10010, USA<br>
+                    +1 212-686-1006<br>
+                    restaurant@lelieu.dk<br>
+                </p>
+            </div>
+
+
+            <div class="kasse2 info">
+
+                <p>
+                    Opening hours<br><br>
+
+                    Thursday - Saturday 17.30-02.00<br>
+                    Last booking at 22.00<br>
+                </p>
+
+
+            </div>
+
+            <div class="kasse3">
+
+                <img src="forside_foto/kort.png" alt="map">
+
+            </div>
+
+        </div>
+
+
+
+
+    </div>
+
+
+    <script>
+        window.addEventListener("load", sidenVises);
+
+        function sidenVises() {
+            console.log("siden vises");
+
+
+            document.querySelector(".menu_skjult").classList.add("hidden");
+            document.querySelector(".page").classList.add("fade_in");
+
+
+            document.querySelector(".menuknap").addEventListener("click", toggleMenu);
+
+        }
+
+
+
+        function toggleMenu() {
+            console.log("toggle menu");
+
+            document.querySelector(".menu_skjult").classList.toggle("hidden");
+
+            let erSkjult = document.querySelector(".menu_skjult").classList.contains("hidden");
+
+            if (erSkjult == true) {
+                document.querySelector(".menuknap").textContent = "☰";
+            } else {
+                document.querySelector(".menuknap").textContent = "X";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
